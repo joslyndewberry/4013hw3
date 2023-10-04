@@ -6,6 +6,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Total Tracks</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,12 @@ while ($album = $albums->fetch_assoc()) {
     <td><?php echo $album['album_id']; ?></td>
     <td><?php echo $album['album_name']; ?></td>
     <td><?php echo $album['total_tracks']; ?></td>
+    <td>
+      <form method="post" action="songs-in-album.php">
+        <input type="hidden" name="sid" value="<?php echo $album['album_id']; ?>">
+        <button type="submit" class="btn btn-primary">Songs</button>
+      </form>
+    </td>
   </tr>
 <?php 
 }
