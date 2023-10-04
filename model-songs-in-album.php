@@ -1,9 +1,9 @@
 <?php
-function selectAlbumsByArtist($alid) {
+function selectSongsInAlbum($sid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT al.album_id, album_name, total_tracks FROM `album` al join artist a on a.artist_id = al.artist_id WHERE al.artist_id=?");
-        $stmt->bind_param("i", $alid);
+        $stmt = $conn->prepare("SELECT song_id, song_name, duration FROM `song`s join album al on al.album_id = s.album_id WHERE s.album_id=?");
+        $stmt->bind_param("i", $sid);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
