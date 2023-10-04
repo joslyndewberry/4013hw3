@@ -1,4 +1,4 @@
-<h1>Artists</h1>
+<h1>Albums</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
