@@ -6,6 +6,8 @@
       <th>ID</th>
       <th>Name</th>
       <th>Duration</th>
+        <th>Genre</th>
+        <th>Album</th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +18,8 @@ while ($song = $songs->fetch_assoc()) {
     <td><?php echo $song['song_id']; ?></td>
     <td><?php echo $song['song_name']; ?></td>
     <td><?php echo $song['duration']; ?></td>
+    <td><?php echo $song['genre_name']; ?></td>
+    <td><?php echo $song['album_name']; ?></td>
   </tr>
 <?php 
 }
