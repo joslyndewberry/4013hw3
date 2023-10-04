@@ -13,8 +13,8 @@
 while ($artist = $artists->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $artists['artist_id']; ?></td>
-    <td><?php echo $artists['artist_name']; ?></td>
+    <td><?php echo $artist['artist_id']; ?></td>
+    <td><?php echo $artist['artist_name']; ?></td>
   </tr>
   <?php
   
