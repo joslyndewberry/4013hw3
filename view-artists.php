@@ -19,7 +19,7 @@ while ($artist = $artists->fetch_assoc()) {
     <td><a href="songs-by-artist.php?id=<?php echo $artist['artist_id']; ?>">Songs</a></td>
     <td>
       <form method="post" action="albums-by-artist.php">
-        <input type="hidden" name="alid" value="<?php echo $artist['artist_id']; ?>">
+        <input type="hidden" name="aid" value="<?php echo $artist['artist_id']; ?>">
         <button type="submit" class="btn btn-primary">Albums</button>
       </form>
     </td>
