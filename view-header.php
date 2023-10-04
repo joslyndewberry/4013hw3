@@ -31,7 +31,7 @@
           <a class="nav-link" href="songs.php">Songs</a>
         </li>
            <li class="nav-item">
-          <a class="nav-link" href="artist-songs.php">Artist Songs</a>
+          <a class="nav-link" href="artist-albums.php">Artist with Albums</a>
         </li>
       </ul>
     </div>
