@@ -16,8 +16,8 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="artist_name" class="form-label">Artist Name</label>
-            <input type="text" class="form-control" id="artist_name" name="artist_name">
+            <label for="aname" class="form-label">Artist Name</label>
+            <input type="text" class="form-control" id="aname" name="aname">
           </div>
            <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
