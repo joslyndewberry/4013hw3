@@ -16,7 +16,7 @@ function selectArtists() {
 function insertArtist($aName) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO 'artist' ('artist_name') VALUES (?)");
+        $stmt = $conn->prepare("INSERT INTO `artist` (`artist_name`) VALUES (?)");
         $stmt->bind_param("s", $aName);
         $success = $stmt->execute();
         $conn->close();
