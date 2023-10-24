@@ -9,7 +9,7 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch($_POST['actionType']) {
     case "Add":
-      insertArtist($_POST['artname']);
+      insertArtist($_POST['aname']);
       break;
   }
 }
