@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
    <?php
-    Include ="view-artists-newform.php";
+    Include "view-artists-newform.php";
     ?>
   </div>
 </div>
