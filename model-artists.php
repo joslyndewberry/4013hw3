@@ -27,11 +27,11 @@ function insertArtist($aName) {
     }
 }
 
-function updateArtist($aname, $artid) {
+function updateArtist($aName, $artid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update 'artist' set 'artist_name'=? where artist_id = ?");
-        $stmt->bind_param("si", $aname, $artid);
+        $stmt->bind_param("si", $aName, $artid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
