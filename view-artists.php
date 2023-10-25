@@ -28,11 +28,6 @@ while ($artist = $artists->fetch_assoc()) {
     <td><?php echo $artist['artist_name']; ?></td>
     <td><a href="songs-by-artist.php?id=<?php echo $artist['artist_id']; ?>">Songs</a></td>
     <td>
-      <?php
-      Include "view-artists-editform.php";
-      ?>
-    </td>
-    <td>
       <form method="post" action="">
         <input type="hidden" name="artid" value="<?php echo $artist['artist_id']; ?>">
         <input type="hidden" name="actionType" value="Delete">
@@ -42,6 +37,11 @@ while ($artist = $artists->fetch_assoc()) {
           </svg>
         </button>
       </form>
+    </td>
+    <td>
+      <?php
+      Include "view-artists-editform.php";
+      ?>
     </td>
   </tr>
 <?php 
