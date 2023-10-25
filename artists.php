@@ -14,6 +14,13 @@ if (isset($_POST['actionType'])) {
       } else {
         '<div class="alert alert-danger" role="alert">Error</div>"';
       }
+      case "Edit":
+      if (insertArtist($_POST['aName']), $_POST['artid'])) {
+        echo '<div class="alert alert-secondary" role="alert">Artist Edited.</div>';
+      } else {
+        '<div class="alert alert-danger" role="alert">Error</div>"';
+      }
+      break;
       break;
         case "Delete":
       if (deleteArtist($_POST['artid'])) {
