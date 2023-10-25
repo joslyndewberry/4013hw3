@@ -10,14 +10,14 @@ if (isset($_POST['actionType'])) {
   switch($_POST['actionType']) {
     case "Add":
       if (insertArtist($_POST['aName'])) {
-        echo '<div class="alert alert-secondary" role="alert">Artist Added.</div>"';
+        echo '<div class="alert alert-secondary" role="alert">Artist Added.</div>';
       } else {
         '<div class="alert alert-danger" role="alert">Error</div>"';
       }
       break;
         case "Delete":
       if (deleteArtist($_POST['artid'])) {
-        echo '<div class="alert alert-secondary" role="alert">Artist Deleted.</div>"';
+        echo '<div class="alert alert-secondary" role="alert">Artist Deleted.</div>';
       } else {
         '<div class="alert alert-danger" role="alert">Error</div>"';
       }
