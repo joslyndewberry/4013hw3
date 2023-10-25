@@ -16,7 +16,7 @@ function selectAlbums() {
 function insertAlbum($alName, $tracks) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `album` (`artist_name`, `total_tracks`) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `album` (`album_name`, `total_tracks`) VALUES (?, ?)");
         $stmt->bind_param("si", $alName, $tracks);
         $success = $stmt->execute();
         $conn->close();
