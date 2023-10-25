@@ -17,6 +17,7 @@
       <th>Name</th>
       <th>Total Tracks</th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
