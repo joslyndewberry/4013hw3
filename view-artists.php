@@ -28,6 +28,9 @@ while ($artist = $artists->fetch_assoc()) {
     <td><?php echo $artist['artist_name']; ?></td>
     <td><a href="songs-by-artist.php?id=<?php echo $artist['artist_id']; ?>">Songs</a></td>
     <td>
+      <?php
+      Include "view-artists-editform.php";
+      ?>
     </td>
     <td>
       <form method="post" action="">
