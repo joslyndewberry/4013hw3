@@ -13,4 +13,46 @@ function selectAlbums() {
     }
 }
 
+function insertAlbum($alName, $tracks) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `album` (`artist_name`, `total_tracks`) VALUES (?, ?)");
+        $stmt->bind_param("si", $alName, $tracks);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function updateAlbum($alName, $tracks, $alid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update 'album' set 'album_name'= ?, 'total_tracks' = ? where album_id = ?");
+        $stmt->bind_param("sii", $alName, $tracks, $alid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deleteAlbum($alid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from album where album_id = ?");
+        $stmt->bind_param("i", $alid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 ?>
