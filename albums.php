@@ -8,7 +8,11 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch($_POST['actionType']) {
     case "Add":
-      insertAlbum($_POST['alName'], $_POST['tracks']);
+        if (insertAlbum($_POST['alName'], $_POST['tracks'])) {
+          echo '<div class="alert alert-secondary" role="alert">Album Added.</div>"';
+        } else {
+          '<div class="alert alert-danger" role="alert">Error</div>"';
+        }
       break;
   }
 }
