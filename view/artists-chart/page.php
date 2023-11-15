@@ -36,11 +36,11 @@ while ($artist = $artists->fetch_assoc()) {
 </script>
 
 <div>
-  <canvas id="myChart"></canvas>
+  <canvas id="ChartTwo"></canvas>
 </div>
 
 <script>
-  const ctx = document.getElementById('myChart');
+  const ctx = document.getElementById('ChartTwo');
 
 
   new Chart(ctx, {
