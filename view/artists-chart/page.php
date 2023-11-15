@@ -35,31 +35,3 @@ while ($artist = $artists->fetch_assoc()) {
 });
 </script>
 
-<script>
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-    datasets: [{
-        data: [
-<?php
-while ($artist = $artists->fetch_assoc()) {
-  echo $artist['num_songs'] . ", ";
-}
-?>
-          ]
-    }],
-
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-     <?php
-      $artists = selectArtists();
-        while ($artist = $artists->fetch_assoc()) {
-          echo "'" . $artist['artist_name'] . "', ";
-        }
-      ?>
-    ]
-},
-});
-</script>
