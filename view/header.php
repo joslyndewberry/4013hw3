@@ -43,6 +43,9 @@
         <li class="nav-item">
           <a class="nav-link" href="albums-chart.php">Albums Chart</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="genres-chart.php">Genres Chart</a>
+        </li>
       </ul>
     </div>
   </div>
