@@ -12,7 +12,7 @@
   new Chart(ctx, {
     type: 'bar',
    data = {
-    labels: labels,
+    labels: ['One OK ROCK', 'Lisa'],
     datasets: [{
     label: 'My First Dataset',
     data: [65, 59, 80, 81, 56, 55, 40],
@@ -36,6 +36,6 @@
     ],
     borderWidth: 1
   }]
-}
+},
 });
 </script>
