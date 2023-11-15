@@ -1,5 +1,5 @@
 
-<h1>Artists</h1>
+<h1>Artists Charts</h1>
 <div>
   <canvas id="myChart"></canvas>
 </div>
