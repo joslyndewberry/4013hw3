@@ -37,6 +37,9 @@
            <li class="nav-item">
           <a class="nav-link" href="artists-chart.php">Artists Charts</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="songs-chart.php">Songs Charts</a>
+        </li>
       </ul>
     </div>
   </div>
