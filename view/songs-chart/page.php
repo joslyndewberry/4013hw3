@@ -14,6 +14,10 @@
    data = {
     labels: ['One OK ROCK', 'Lisa'],
     datasets: [{
+    barPercentage: 0.5,
+    barThickness: 6,
+    maxBarThickness: 8,
+    minBarLength: 2,
     label: 'My First Dataset',
     data: [65, 59],
     backgroundColor: [
