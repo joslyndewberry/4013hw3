@@ -35,6 +35,10 @@ while ($artist = $artists->fetch_assoc()) {
 });
 </script>
 
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
 <script>
   const ctx = document.getElementById('myChart');
 
