@@ -35,8 +35,8 @@ while ($artist = $artists->fetch_assoc()) {
 });
 
   
-    new Chart(ctx, {
-    type: 'pie',
+  new Chart(ctx, {
+    type: 'doughnut',
     data: {
     datasets: [{
         data: [
