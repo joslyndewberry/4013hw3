@@ -6,31 +6,41 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script>
-  const ctx = document.getElementById('myChart');
+    <?php
+    // Sample data for the bar chart
+    $labels = ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'];
+    $data = [12, 19, 3, 5, 2];
 
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-    datasets: [{
-        data: [
-<?php
-while ($artist = $artists->fetch_assoc()) {
-  echo $artist['num_songs'] . ", ";
-}
-?>
-          ]
-    }],
+    // Convert PHP arrays to JSON for JavaScript
+    $labels_json = json_encode($labels);
+    $data_json = json_encode($data);
+    ?>
 
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-     <?php
-      $artists = selectArtists();
-        while ($artist = $artists->fetch_assoc()) {
-          echo "'" . $artist['artist_name'] . "', ";
-        }
-      ?>
-    ]
-},
-});
-</script>
+    <script>
+        var data = {
+            labels: <?php echo $labels_json; ?>,
+            datasets: [{
+                label: 'Sample Bar Chart',
+                data: <?php echo $data_json; ?>,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var options = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        var ctx = document.getElementById('myBarChart').getContext('2d');
+
+        var myBarChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+    </script>
