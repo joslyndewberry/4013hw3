@@ -9,34 +9,38 @@
 <script>
   const ctx = document.getElementById('myChart');
 
-  new Chart(ctx, {
-    type: 'bar',
-   data = {
-    labels: ['One OK ROCK', 'Lisa'],
-    datasets: [{
-    barPercentage: 0.5,
-    barThickness: 6,
-    maxBarThickness: 8,
-    minBarLength: 2,
-    label: 'My First Dataset',
-    data: [65, 59],
-    backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(201, 203, 207, 0.2)'
-    ],
-    borderColor: [
-      'rgb(255, 99, 132)',
-      'rgb(201, 203, 207)'
-    ],
-    borderWidth: 1
-  }]
-},
- options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  },
-});
-</script>
+    $labels = ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'];
+    $data = [12, 19, 3, 5, 2];
+
+    $labels_json = json_encode($labels);
+    $data_json = json_encode($data);
+    ?>
+
+    <script>
+        var data = {
+            labels: <?php echo $labels_json; ?>,
+            datasets: [{
+                label: 'Sample Bar Chart',
+                data: <?php echo $data_json; ?>,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var options = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        var ctx = document.getElementById('myBarChart').getContext('2d');
+
+        var myBarChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+    </script>
