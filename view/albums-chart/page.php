@@ -10,14 +10,9 @@
   const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
-    type: 'bar',
+    type: 'polarArea',
     data: {
     datasets: [{
-        barPercentage: 0.5,
-        barThickness: 100,
-        maxBarThickness: 100,
-        minBarLength: 2,
-        label: 'Albums',
         data: [
 <?php
 while ($album = $albums->fetch_assoc()) {
