@@ -1,7 +1,6 @@
 
 <h1>Artists Charts</h1>
 
-  <div>
 <div>
   <canvas id="myChart"></canvas>
 </div>
@@ -35,14 +34,6 @@ while ($artist = $artists->fetch_assoc()) {
 },
 });
 </script>
-  </div>
- 
-  
-<div>
-<div>
-  <canvas id="myChart"></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
   const ctx = document.getElementById('myChart');
@@ -73,4 +64,3 @@ while ($artist = $artists->fetch_assoc()) {
 },
 });
 </script>
-  </div>
