@@ -6,41 +6,35 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <?php
-    // Sample data for the bar chart
-    $labels = ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'];
-    $data = [12, 19, 3, 5, 2];
+<script>
+  const ctx = document.getElementById('myChart');
 
-    // Convert PHP arrays to JSON for JavaScript
-    $labels_json = json_encode($labels);
-    $data_json = json_encode($data);
-    ?>
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+    datasets: [{
+        barPercentage: 0.5,
+        barThickness: 6,
+        maxBarThickness: 8,
+        minBarLength: 2,
+        data: [
+<?php
+while ($artist = $artists->fetch_assoc()) {
+  echo $artist['num_songs'] . ", ";
+}
+?>
+          ]
+    }],
 
-    <script>
-        var data = {
-            labels: <?php echo $labels_json; ?>,
-            datasets: [{
-                label: 'Sample Bar Chart',
-                data: <?php echo $data_json; ?>,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        };
-
-        var options = {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        };
-
-        var ctx = document.getElementById('myBarChart').getContext('2d');
-
-        var myBarChart = new Chart(ctx, {
-            type: 'bar',
-            data: data,
-            options: options
-        });
-    </script>
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+     <?php
+      $artists = selectArtists();
+        while ($artist = $artists->fetch_assoc()) {
+          echo "'" . $artist['artist_name'] . "', ";
+        }
+      ?>
+    ]
+},
+});
+</script>
