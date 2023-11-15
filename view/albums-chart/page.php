@@ -1,5 +1,5 @@
 
-<h1>Albums Chart</h1>
+<h1>Total Tracks per Album Chart</h1>
 
 <div>
   <canvas id="myChart"></canvas>
