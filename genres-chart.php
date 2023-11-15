@@ -4,7 +4,7 @@ require_once("model/genres-chart.php");
 
 $pageTitle = "Genres Chart";
 include "view/header.php";
-$artists = selectGenres();
+$genres = selectGenres();
 include "view/genres-chart/page.php";
 include "view/footer.php"
 ?>
