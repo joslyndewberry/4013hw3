@@ -35,10 +35,13 @@
         </li>
           </li>
            <li class="nav-item">
-          <a class="nav-link" href="artists-chart.php">Artists Charts</a>
+          <a class="nav-link" href="artists-chart.php">Artists Chart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="songs-chart.php">Songs Charts</a>
+          <a class="nav-link" href="songs-chart.php">Songs Chart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="albums-chart.php">Albums Chart</a>
         </li>
       </ul>
     </div>
