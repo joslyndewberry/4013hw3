@@ -10,13 +10,13 @@
 
   new Chart(ctx, {
     type: 'bar',
-    indexAxis: 'y',
     data: {
     datasets: [{
         barPercentage: 0.5,
         barThickness: 100,
         maxBarThickness: 100,
         minBarLength: 2,
+        label: 'Genres',
         data: [
 <?php
 while ($genre = $genres->fetch_assoc()) {
