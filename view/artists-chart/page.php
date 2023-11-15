@@ -1,5 +1,5 @@
 
-<h1>Artists Charts</h1>
+<h1>Total Songs by Artists</h1>
 
 <div>
   <canvas id="myChart"></canvas>
