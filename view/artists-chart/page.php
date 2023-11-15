@@ -1,5 +1,7 @@
 
 <h1>Artists Charts</h1>
+
+ <div class = "row"> 
 <div>
   <canvas id="myChart"></canvas>
 </div>
@@ -33,3 +35,4 @@ while ($artist = $artists->fetch_assoc()) {
 },
 });
 </script>
+</div>
