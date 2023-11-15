@@ -11,13 +11,13 @@
 
   new Chart(ctx, {
     type: 'bar',
-    label: 'Artists',
     data: {
     datasets: [{
         barPercentage: 0.5,
-        barThickness: 6,
+        barThickness: 10,
         maxBarThickness: 8,
         minBarLength: 2,
+        label: 'Artists',
         data: [
 <?php
 while ($artist = $artists->fetch_assoc()) {
