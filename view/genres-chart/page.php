@@ -36,5 +36,8 @@ while ($genre = $genres->fetch_assoc()) {
       ?>
     ]
 },
+options: {
+  indexAxis: 'y',
+}
 });
 </script>
