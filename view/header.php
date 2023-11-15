@@ -33,6 +33,10 @@
            <li class="nav-item">
           <a class="nav-link" href="album-genre.php">Album Genre</a>
         </li>
+          </li>
+           <li class="nav-item">
+          <a class="nav-link" href="artists-chart.php">Artists Charts</a>
+        </li>
       </ul>
     </div>
   </div>
