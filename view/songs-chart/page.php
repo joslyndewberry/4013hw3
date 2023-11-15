@@ -11,6 +11,7 @@
 
   new Chart(ctx, {
     type: 'bar',
+    label: 'Artists',
     data: {
     datasets: [{
         barPercentage: 0.5,
