@@ -24,17 +24,6 @@ while ($genre = $genres->fetch_assoc()) {
 }
 ?>
           ]
-      backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(255, 159, 64, 0.2)',
-      'rgba(201, 203, 207, 0.2)'
-    ],
-    borderColor: [
-      'rgb(255, 99, 132)',
-      'rgb(255, 159, 64)',
-      'rgb(201, 203, 207)'
-    ],
-    borderWidth: 1
     }],
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
