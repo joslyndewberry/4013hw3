@@ -14,8 +14,8 @@
     data: {
     datasets: [{
         barPercentage: 0.5,
-        barThickness: 40,
-        maxBarThickness: 40,
+        barThickness: 100,
+        maxBarThickness: 100,
         minBarLength: 2,
         label: 'Artists',
         data: [
