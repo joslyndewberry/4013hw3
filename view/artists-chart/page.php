@@ -38,12 +38,7 @@ while ($artist = $artists->fetch_assoc()) {
 </script>
   </div>
 
-<?php
-while ($artist = $artists->fetch_assoc()) {
-  echo $artist['num_songs'] . ", ";
-}
-?>
-  
+
 <div>
 <div>
   <canvas id="myChart"></canvas>
