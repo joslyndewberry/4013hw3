@@ -1,5 +1,5 @@
 
-<h1>Artists Charts</h1>
+<h1>Songs Charts</h1>
 
 <div>
   <canvas id="myChart"></canvas>
@@ -10,27 +10,29 @@
   const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-    datasets: [{
-        data: [
-<?php
-while ($artist = $artists->fetch_assoc()) {
-  echo $artist['num_songs'] . ", ";
-}
-?>
-          ]
-    }],
-
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
+    type: 'bar',
+     labels: [
      <?php
       $artists = selectArtists();
         while ($artist = $artists->fetch_assoc()) {
           echo "'" . $artist['artist_name'] . "', ";
         }
       ?>
-    ]
+    ],
+    data: {
+    datasets: [{
+        barPercentage: 0.5,
+        barThickness: 6,
+        maxBarThickness: 8,
+        minBarLength: 2,
+        data: [
+          <?php
+                while ($artist = $artists->fetch_assoc()) {
+                echo $artist['num_songs'] . ", ";
+              }
+          ?>
+        ]
+    }]
 },
 });
 </script>
