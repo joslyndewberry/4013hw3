@@ -17,11 +17,11 @@
         barThickness: 100,
         maxBarThickness: 100,
         minBarLength: 2,
-        label: 'Artists',
+        label: 'Albums',
         data: [
 <?php
-while ($artist = $artists->fetch_assoc()) {
-  echo $artist['num_albums'] . ", ";
+while ($album = $albums->fetch_assoc()) {
+  echo $album['total_tracks'] . ", ";
 }
 ?>
           ]
@@ -30,9 +30,9 @@ while ($artist = $artists->fetch_assoc()) {
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
      <?php
-      $artists = selectArtists();
-        while ($artist = $artists->fetch_assoc()) {
-          echo "'" . $artist['artist_name'] . "', ";
+      $albums = selectAlbums();
+        while ($album = $albums->fetch_assoc()) {
+          echo "'" . $album['album_name'] . "', ";
         }
       ?>
     ]
