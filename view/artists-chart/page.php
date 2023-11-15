@@ -5,12 +5,6 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<?php
-while ($artist = $artists->fetch_assoc()) {
-  
-}
-?>
-
 <script>
   const ctx = document.getElementById('myChart');
 
