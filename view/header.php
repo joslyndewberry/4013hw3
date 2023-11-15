@@ -35,16 +35,16 @@
         </li>
           </li>
            <li class="nav-item">
-          <a class="nav-link" href="artists-chart.php">Artists Chart</a>
+          <a class="nav-link" href="artists-chart.php">Artists Songs Pie Chart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="songs-chart.php">Songs Chart</a>
+          <a class="nav-link" href="songs-chart.php">Songs Bar Chart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="albums-chart.php">Albums Chart</a>
+          <a class="nav-link" href="albums-chart.php">Albums Tracks Chart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="genres-chart.php">Genres Chart</a>
+          <a class="nav-link" href="genres-chart.php">Genres Songs Chart</a>
         </li>
       </ul>
     </div>
