@@ -12,6 +12,10 @@
     type: 'bar',
     data: {
     datasets: [{
+        barPercentage: 0.5,
+        barThickness: 100,
+        maxBarThickness: 100,
+        minBarLength: 2,
         data: [
 <?php
 while ($genre = $genres->fetch_assoc()) {
