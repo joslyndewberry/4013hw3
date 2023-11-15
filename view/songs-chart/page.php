@@ -25,13 +25,7 @@
         barThickness: 6,
         maxBarThickness: 8,
         minBarLength: 2,
-        data: [
-          <?php
-                while ($artist = $artists->fetch_assoc()) {
-                echo $artist['num_songs'] . ", ";
-              }
-          ?>
-        ]
+        data: [10, 20, 30, 40, 50, 60, 70]
     }]
 },
 });
