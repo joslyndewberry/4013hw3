@@ -1,4 +1,4 @@
-<h1>Genres Chart</h1>
+<h1>Total Songs in Genres Chart</h1>
 
 <div>
   <canvas id="myChart"></canvas>
@@ -13,8 +13,8 @@
     data: {
     datasets: [{
         barPercentage: 0.5,
-        barThickness: 100,
-        maxBarThickness: 100,
+        barThickness: 120,
+        maxBarThickness: 120,
         minBarLength: 2,
         label: 'Genres',
         data: [
