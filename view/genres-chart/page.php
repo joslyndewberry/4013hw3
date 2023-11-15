@@ -10,6 +10,7 @@
 
   new Chart(ctx, {
     type: 'bar',
+    indexAxis: 'y',
     data: {
     datasets: [{
         barPercentage: 0.5,
@@ -35,8 +36,5 @@ while ($genre = $genres->fetch_assoc()) {
       ?>
     ]
 },
-options: {
-    indexAxis: 'y',
-  },
 });
 </script>
